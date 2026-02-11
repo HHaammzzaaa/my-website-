@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resin Radiance | Handcrafted Resin Gifts</title>
+    <title>Resin Radiance | Luxury Resin Gifts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+<!-- Glitter Background -->
+<div class="glitter-container"></div>
 
 <!-- ================= HEADER ================= -->
 <header class="header">
@@ -21,13 +23,15 @@
         <nav class="nav" id="navMenu">
             <ul>
                 <li><a href="#hero">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#products">Collections</a></li>
                 <li><a href="#contact">Order</a></li>
             </ul>
         </nav>
 
-        <button id="themeToggle" class="theme-toggle">🌙</button>
+        <div class="cart">
+            🛒 <span id="cartCount">0</span>
+        </div>
 
         <div class="hamburger" id="hamburger">☰</div>
     </div>
@@ -36,9 +40,41 @@
 <!-- ================= HERO ================= -->
 <section class="hero" id="hero">
     <div class="container hero-content">
-        <h1>Handcrafted Resin Gifts That Sparkle</h1>
-        <p>Personalized resin art creations made with love — perfect for every special moment.</p>
-        <a href="#products" class="btn">Explore Collection</a>
+        <h1>Luxury Handmade Resin Gifts</h1>
+        <p>Elegant, customized resin creations crafted with love.</p>
+        <a href="#shop" class="btn">Shop Now</a>
+    </div>
+</section>
+
+<!-- ================= SHOP ================= -->
+<section class="shop" id="shop">
+    <div class="container">
+        <h2>Our Best Sellers</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <h3>Custom Name Frame</h3>
+                <p class="price">₹999</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <h3>Resin Keychain</h3>
+                <p class="price">₹299</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img"></div>
+                <h3>Jewelry Tray</h3>
+                <p class="price">₹799</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+        </div>
     </div>
 </section>
 
@@ -47,48 +83,21 @@
     <div class="container">
         <h2>About Resin Radiance</h2>
         <p>
-            Resin Radiance creates elegant handmade resin gifts including name frames,
-            keychains, photo frames, jewelry trays, and custom keepsakes.
-            Each piece is uniquely crafted to make your moments unforgettable.
+            We create premium resin art gifts including frames, keychains,
+            trays, and custom keepsakes. Every piece is handcrafted to make
+            your special moments unforgettable.
         </p>
-    </div>
-</section>
-
-<!-- ================= PRODUCTS ================= -->
-<section class="products" id="products">
-    <div class="container">
-        <h2>Our Collections</h2>
-
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>Custom Name Frames</h3>
-                <p>Beautiful glitter resin name frames for birthdays & anniversaries.</p>
-            </div>
-
-            <div class="card">
-                <h3>Resin Keychains</h3>
-                <p>Personalized name and initial keychains in premium resin finish.</p>
-            </div>
-
-            <div class="card">
-                <h3>Jewelry & Trays</h3>
-                <p>Luxury resin trays perfect for gifts and home décor.</p>
-            </div>
-
-        </div>
     </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
     <div class="container">
-        <h2>Place Your Order</h2>
-
+        <h2>Place Custom Order</h2>
         <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Product Details / Customization Request" required></textarea>
+            <textarea rows="5" placeholder="Customization Details" required></textarea>
             <button type="submit" class="btn">Submit Order</button>
         </form>
     </div>
@@ -98,7 +107,6 @@
 <footer class="footer">
     <div class="container footer-content">
         <p>© 2026 Resin Radiance | Handcrafted with Love 💖</p>
-
         <div class="social-links">
             <a href="#">Instagram</a>
             <a href="#">WhatsApp</a>
@@ -108,6 +116,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
