@@ -1,5 +1,4 @@
-// ================= MOBILE NAV =================
-
+// Mobile Menu
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
@@ -7,25 +6,23 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-// ================= THEME TOGGLE =================
-
+// Theme Toggle
 const themeToggle = document.getElementById("themeToggle");
 
-// Load saved theme
-if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-theme");
-    themeToggle.textContent = "☀";
-}
-
-// Toggle theme
 themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme");
+    document.body.classList.toggle("dark-theme");
 
-    if (document.body.classList.contains("light-theme")) {
-        localStorage.setItem("theme", "light");
+    if (document.body.classList.contains("dark-theme")) {
         themeToggle.textContent = "☀";
-    } else {
         localStorage.setItem("theme", "dark");
+    } else {
         themeToggle.textContent = "🌙";
+        localStorage.setItem("theme", "light");
     }
 });
+
+// Load Saved Theme
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme");
+    themeToggle.textContent = "☀";
+}
