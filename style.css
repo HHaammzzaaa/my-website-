@@ -1,4 +1,22 @@
-/* ================= GLOBAL STYLES ================= */
+/* ================= CSS VARIABLES ================= */
+
+:root {
+    --bg-color: #0f172a;
+    --secondary-bg: #1e293b;
+    --text-color: #f1f5f9;
+    --accent-color: #38bdf8;
+    --card-bg: #1e293b;
+}
+
+body.light-theme {
+    --bg-color: #ffffff;
+    --secondary-bg: #f1f5f9;
+    --text-color: #0f172a;
+    --accent-color: #2563eb;
+    --card-bg: #ffffff;
+}
+
+/* ================= GLOBAL ================= */
 
 * {
     margin: 0;
@@ -9,18 +27,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #0f172a;
-    color: #f1f5f9;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
 .container {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-}
-
-h1, h2, h3 {
-    margin-bottom: 15px;
 }
 
 section {
@@ -30,12 +45,12 @@ section {
 /* ================= HEADER ================= */
 
 .header {
-    background: #0f172a;
+    background: var(--bg-color);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #1e293b;
+    border-bottom: 1px solid #ccc;
 }
 
 .nav-container {
@@ -48,7 +63,7 @@ section {
 .logo {
     font-size: 22px;
     font-weight: 600;
-    color: #38bdf8;
+    color: var(--accent-color);
 }
 
 .nav ul {
@@ -59,15 +74,24 @@ section {
 
 .nav a {
     text-decoration: none;
-    color: #f1f5f9;
+    color: var(--text-color);
     transition: 0.3s;
 }
 
 .nav a:hover {
-    color: #38bdf8;
+    color: var(--accent-color);
 }
 
-/* Hamburger */
+.theme-toggle {
+    background: var(--accent-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
 .hamburger {
     display: none;
     font-size: 26px;
@@ -81,44 +105,34 @@ section {
     display: flex;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to right, #0f172a, #1e293b);
+    background: linear-gradient(to right, var(--bg-color), var(--secondary-bg));
     padding-top: 60px;
-}
-
-.hero-content h1 {
-    font-size: 42px;
-}
-
-.hero-content p {
-    margin: 20px 0;
 }
 
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    background: #38bdf8;
-    color: #0f172a;
+    background: var(--accent-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 6px;
     transition: 0.3s;
-    font-weight: 500;
 }
 
 .btn:hover {
-    background: #0ea5e9;
+    opacity: 0.9;
 }
 
 /* ================= ABOUT ================= */
 
 .about {
-    background: #1e293b;
+    background: var(--secondary-bg);
     text-align: center;
 }
 
 /* ================= SERVICES ================= */
 
 .services {
-    background: #0f172a;
     text-align: center;
 }
 
@@ -130,21 +144,21 @@ section {
 }
 
 .card {
-    background: #1e293b;
+    background: var(--card-bg);
     padding: 30px;
     border-radius: 10px;
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    background: #334155;
 }
 
 /* ================= CONTACT ================= */
 
 .contact {
-    background: #1e293b;
+    background: var(--secondary-bg);
     text-align: center;
 }
 
@@ -158,36 +172,28 @@ section {
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
-    border: none;
     border-radius: 6px;
-    outline: none;
+    border: 1px solid #ccc;
 }
 
 /* ================= FOOTER ================= */
 
 .footer {
-    background: #0f172a;
+    background: var(--bg-color);
     padding: 20px 0;
-    border-top: 1px solid #1e293b;
+    border-top: 1px solid #ccc;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
 }
 
 .social-links a {
-    color: #38bdf8;
+    color: var(--accent-color);
     margin-left: 15px;
     text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: #0ea5e9;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -202,7 +208,7 @@ section {
         position: absolute;
         top: 60px;
         right: 0;
-        background: #0f172a;
+        background: var(--bg-color);
         width: 100%;
         display: none;
         text-align: center;
@@ -221,5 +227,4 @@ section {
     .hamburger {
         display: block;
     }
-
 }
