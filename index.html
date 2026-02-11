@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resin Radiance | Luxury Resin Gifts</title>
+    <title>Resin Radiance | Handcrafted Resin Gifts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- Glitter Background -->
@@ -23,16 +24,14 @@
         <nav class="nav" id="navMenu">
             <ul>
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Order</a></li>
             </ul>
         </nav>
 
-        <div class="cart">
-            🛒 <span id="cartCount">0</span>
-        </div>
-
+        <button id="themeToggle" class="theme-toggle">🌙</button>
         <div class="hamburger" id="hamburger">☰</div>
     </div>
 </header>
@@ -40,81 +39,114 @@
 <!-- ================= HERO ================= -->
 <section class="hero" id="hero">
     <div class="container hero-content">
-        <h1>Luxury Handmade Resin Gifts</h1>
-        <p>Elegant, customized resin creations crafted with love.</p>
-        <a href="#shop" class="btn">Shop Now</a>
+        <h1>Handcrafted Resin Gifts That Sparkle</h1>
+        <p>Luxury personalized resin art for birthdays, weddings & special moments.</p>
+        <a href="#products" class="btn">Shop Now</a>
     </div>
 </section>
 
-<!-- ================= SHOP ================= -->
-<section class="shop" id="shop">
+<!-- ================= PRODUCTS ================= -->
+<section class="products" id="products">
     <div class="container">
-        <h2>Our Best Sellers</h2>
+        <h2>Our Products</h2>
 
-        <div class="product-grid">
+        <div class="card-grid">
 
-            <div class="product-card">
-                <div class="product-img"></div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1616627984998-8e09e2b8c59f" alt="Resin Frame">
                 <h3>Custom Name Frame</h3>
-                <p class="price">₹999</p>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <p>Premium glitter resin name frame.</p>
             </div>
 
-            <div class="product-card">
-                <div class="product-img"></div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613" alt="Resin Keychain">
                 <h3>Resin Keychain</h3>
-                <p class="price">₹299</p>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <p>Personalized initials & charms.</p>
             </div>
 
-            <div class="product-card">
-                <div class="product-img"></div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" alt="Resin Tray">
                 <h3>Jewelry Tray</h3>
-                <p class="price">₹799</p>
-                <button class="btn add-to-cart">Add to Cart</button>
+                <p>Elegant resin trays for gifting.</p>
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="about" id="about">
+<!-- ================= PRICING ================= -->
+<section class="pricing" id="pricing">
     <div class="container">
-        <h2>About Resin Radiance</h2>
-        <p>
-            We create premium resin art gifts including frames, keychains,
-            trays, and custom keepsakes. Every piece is handcrafted to make
-            your special moments unforgettable.
-        </p>
+        <h2>Pricing</h2>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>Basic</h3>
+                <p class="price">₹499</p>
+                <p>Simple Resin Keychain</p>
+            </div>
+
+            <div class="card featured">
+                <h3>Premium</h3>
+                <p class="price">₹1499</p>
+                <p>Custom Name Frame + Gift Box</p>
+            </div>
+
+            <div class="card">
+                <h3>Luxury</h3>
+                <p class="price">₹2999</p>
+                <p>Full Customized Resin Set</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <h2>Instagram Gallery</h2>
+
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+            <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613">
+            <img src="https://images.unsplash.com/photo-1616627984998-8e09e2b8c59f">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+        </div>
     </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section class="contact" id="contact">
     <div class="container">
-        <h2>Place Custom Order</h2>
+        <h2>Place Your Order</h2>
+
         <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea rows="5" placeholder="Customization Details" required></textarea>
-            <button type="submit" class="btn">Submit Order</button>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">💬</a>
+
 <footer class="footer">
     <div class="container footer-content">
-        <p>© 2026 Resin Radiance | Handcrafted with Love 💖</p>
+        <p>© 2026 Resin Radiance | Made with Love 💖</p>
         <div class="social-links">
             <a href="#">Instagram</a>
-            <a href="#">WhatsApp</a>
             <a href="#">Facebook</a>
         </div>
     </div>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
