@@ -1,113 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Resin Radiance | Luxury Resin Gifts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Premium Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resin Radiance | Luxury Resin Gifts</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- Canvas Glitter Background -->
 <canvas id="glitterCanvas"></canvas>
 
 <header class="header">
-    <div class="container nav-container">
-        <div class="logo">Resin Radiance ✨</div>
-
-        <nav class="nav" id="navMenu">
-            <ul>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Order</a></li>
-            </ul>
-        </nav>
-
-        <button id="themeToggle" class="theme-toggle">🌙</button>
-        <div class="hamburger" id="hamburger">☰</div>
-    </div>
+  <div class="container nav-container">
+    <div class="logo">Resin Radiance ✨</div>
+    <nav>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero">
-    <div class="container hero-content">
-        <h1>Luxury Handcrafted Resin Gifts</h1>
-        <p>Elegant • Personalized • Rose-Gold Inspired Creations</p>
-        <a href="#products" class="btn">Explore Collection</a>
-    </div>
+<section class="hero fade-in">
+  <div class="container">
+    <h1>Luxury Handcrafted Resin Gifts</h1>
+    <p>Elegant • Personalized • Rose-Gold Inspired</p>
+  </div>
 </section>
 
-<section class="products" id="products">
-    <div class="container">
-        <h2>Signature Collection</h2>
-        <div class="card-grid">
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1616627984998-8e09e2b8c59f">
-                <h3>Rose Gold Name Frame</h3>
-                <p>Premium glitter resin frame.</p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1602752250015-52934bc45613">
-                <h3>Luxury Keychain</h3>
-                <p>Metallic resin initials.</p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
-                <h3>Jewelry Tray</h3>
-                <p>Elegant marble + gold finish.</p>
-            </div>
-
-        </div>
-    </div>
+<section class="products container">
+  <h2 class="fade-in">Our Collection</h2>
+  <div id="productContainer" class="card-grid"></div>
 </section>
-
-<section class="pricing" id="pricing">
-    <div class="container">
-        <h2>Pricing</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Basic</h3>
-                <p class="price">₹699</p>
-                <p>Resin Keychain</p>
-            </div>
-
-            <div class="card featured">
-                <h3>Premium</h3>
-                <p class="price">₹1799</p>
-                <p>Custom Frame + Gift Box</p>
-            </div>
-
-            <div class="card">
-                <h3>Luxury Set</h3>
-                <p class="price">₹3499</p>
-                <p>Full Custom Combo</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Place Your Order</h2>
-
-        <form id="orderForm" class="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="text" id="product" placeholder="Product Name" required>
-            <textarea id="details" rows="4" placeholder="Customization Details" required></textarea>
-            <button type="submit" class="btn">Order on WhatsApp</button>
-        </form>
-    </div>
-</section>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank">💬</a>
 
 <footer class="footer">
-    <p>© 2026 Resin Radiance | Crafted with Elegance 💖</p>
+  <p>© 2026 Resin Radiance</p>
 </footer>
 
 <script src="script.js"></script>
